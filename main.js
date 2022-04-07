@@ -237,13 +237,15 @@ const stringArr = ["  dIsco", " ShOes "]
 
 function toLowerConcat() {
     var newStringConcat = [];
-
+    var outStr = "";
     for (let i = 0; i < stringArr.length; i++) {
-        var lower = stringArr[i].toLowerCase();
+        var lower = (stringArr[i].toLowerCase()).trim();
         //console.log(lower)
         newStringConcat.push(lower)
+        //outStr = "+" + lower
     }
-    return newStringConcat;
+    outStr = newStringConcat[0] + "+" + newStringConcat[1]
+    return outStr;
 }
 var x = toLowerConcat()
 console.log(x)
